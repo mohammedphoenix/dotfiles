@@ -15,6 +15,8 @@ alias gic='git checkout'
 alias gif='git fetch'
 alias gig='git merge'
 alias gil='git log --oneline --graph --all --decorate'
+alias resolution='v4l2-ctl -d /dev/video0 --list-formats-ext'
+alias ffrtsp="ffplay -fflags nobuffer -flags low_delay -framedrop -strict experimental -rtsp_transport tcp"
 currentver="$(git --version | awk -F' ' '{print $3}')"
 requiredver="2.3.0"
 if [ "$(printf "$requiredver\n$currentver" | sort -V | head -n1)" == "$currentver" ] && [ "$currentver" != "$requiredver" ];
@@ -28,6 +30,7 @@ fi
 
 alias gill='git pull'
 alias gim='git commit'
+alias gims='git commit -m "update"'
 alias gip='git push'
 alias gis='git status'
 alias gid='git diff'
