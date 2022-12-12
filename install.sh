@@ -56,7 +56,7 @@ fi
 EOF
 fi
 
-
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Charger les aliases
 source ~/.bash_aliases
 
